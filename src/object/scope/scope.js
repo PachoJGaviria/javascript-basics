@@ -90,3 +90,19 @@ function introduceMyself() {
  * **scope chain** -> the JavaScript interpreter will always start off by looking within its own local variables. If the variable isn't found, the search will continue looking up
  */
 
+
+ /**
+  * **Variable Shadowing**
+  * the variable with local scope will just temporarily "shadow" the variable in the outer scope. 
+  * The conflicts are solved moving through the scope chain from inner to outer scopes
+  * 
+  * When a function is run, it creates its own scope. A function's scope is the set of variables available for use within that function. The scope of a function includes:
+
+The function's arguments.
+Local variables declared within the function.
+Variables from its parent function's scope.
+Global variables.
+Variables in JavaScript are also function-scoped. This means that any variables defined inside a function are not available for use outside the function, though any variables defined within blocks (e.g. if or for) are available outside that block.
+
+When it comes to accessing variables, the JavaScript engine will traverse the scope chain, first looking at the innermost level (e.g., a function's local variables), then to outer scopes, eventually reaching the global scope if necessary.
+  */

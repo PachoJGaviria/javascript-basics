@@ -90,7 +90,7 @@ console.log(mom.name);
  * **Do not use globals variables or methods**
  * - Tight Coupling -> pieces of code are joined together in a way where changing one unintentionally alters the functioning of some other code
  * - Name Collisions -> A name collision occurs when two (or more) functions depend on a variable with the same name
- * - http://wiki.c2.com/?GlobalVariablesAreBad
+ * - 
  *
  * **Object function**
  * - Object.keys() returns an array of a given object's own keys (property names).
@@ -101,23 +101,7 @@ console.log(mom.name);
  * - Be stored in variables
  * - Be returned from a function. -> **Higher-order function = A function that returns another function or take it as argument**
  * - Be passed as arguments into another function. -> **callback function**
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- * https://javascript.info
- * https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
- * http://crockford.com/javascript/
+ * 
  *
  *
  */
@@ -152,3 +136,6 @@ const evenNumbers = numbers.filter(function isEven(num) {
 console.log(`The first even numbers are ${evenNumbers}`);
 
 
+/**
+ * objects in JavaScript can represent real-life things. That is, objects can have properties to represent attributes or characteristics, as well as methods to represent actions that can be performed. Using the analogy of spoken language, you can think of objects as nouns, such as a "dog" or a "car." Values of properties are adjectives, such as "blue." Methods, then, are the verbs, such as "bark" or "drive."
+ */
