@@ -12,5 +12,5 @@
   * - Calling a constructor function with the new keyword sets this to a newly-created object.
   * - Calling a function that belongs to an object (i.e., a method) sets this to the object itself.
   * - Calling a function on its own (i.e., simply invoking a regular function) will set this to global scope. i.e the window, which is the global object if the host environment is the browser.
-  * - Call functions allows us to set "this" ourselves! -> with apply(), and with call(). Both methods share quite a few similarities, and they each allow us to specify how we want to set this
+  * - Call functions allows us to set "this" ourselves! -> with apply(), call() and bind(). Those methods share quite a few similarities, and they each allow us to specify how we want to set this
   */
