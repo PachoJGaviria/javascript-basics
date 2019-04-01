@@ -10,4 +10,5 @@ http://crockford.com/javascript/
 https://www.udacity.com/course/intro-to-javascript--ud803
 https://www.udacity.com/course/object-oriented-javascript--ud711
 https://github.com/getify/You-Dont-Know-JS
+http://www.objectplayground.com/
 
