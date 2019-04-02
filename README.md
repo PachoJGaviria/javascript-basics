@@ -11,4 +11,5 @@ https://www.udacity.com/course/intro-to-javascript--ud803
 https://www.udacity.com/course/object-oriented-javascript--ud711
 https://github.com/getify/You-Dont-Know-JS
 http://www.objectplayground.com/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 

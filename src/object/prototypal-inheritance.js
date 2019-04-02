@@ -33,15 +33,21 @@ const rodent = {
     favoriteFood: 'cheese',
     hasTail: true
 };
-function Mouse() {
-    this.favoriteFood = 'cheese';
+function Mouse(name) {
+    this.color = 'black';
+    this.name = name
 }
 Mouse.prototype = rodent;
-const ralph = new Mouse();
+const ralph = new Mouse('ralph');
+console.log(ralph.color);
+console.log(ralph.name);
+console.log(ralph.hasTail);
+console.log(ralph.favoriteFood);
 const result = rodent.isPrototypeOf(ralph);
 console.log(result);
 const myPrototype = Object.getPrototypeOf(ralph);
 console.log(myPrototype);
+console.log(Object.getOwnPropertyDescriptors(ralph));
 console.log(ralph.constructor);
 console.log(rodent.constructor);// function Object() { [native code] }
 console.log('----')
@@ -73,4 +79,27 @@ Object.getPrototypeOf()
 .constructor
  */
 
- 
+/**
+ * When the new instance of Mouse is created, the special property ralph.__proto__ is set to Mouse.prototype. This secret link allows instances of the Mouse constructor to access properties of Mouse.prototype. Keep in mind that you should never use the __proto__ in any code you write.
+ */
+console.log(Object.getPrototypeOf(ralph));
+console.log(ralph.__proto__);
+console.log(ralph.__proto__ == Mouse.prototype);
+
+
+/**
+ * 
+ */
+console.log('_________________________________')
+const mammal = {
+    vertebrate: true,
+    earBones: 3
+};
+const rabbit = Object.create(mammal);
+console.log(rabbit);
+console.log(rabbit.__proto__ === mammal);
+console.log('Properties: ')
+console.log(rabbit.vertebrate);
+console.log(rabbit.earBones);
+
+// {}
