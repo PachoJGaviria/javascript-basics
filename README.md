@@ -12,4 +12,10 @@ https://www.udacity.com/course/object-oriented-javascript--ud711
 https://github.com/getify/You-Dont-Know-JS
 http://www.objectplayground.com/
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e
+https://medium.com/@pyrolistical/factory-functions-pattern-in-depth-356d14801c91
+https://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript
+https://toddmotto.com/mastering-the-module-pattern/#private-methods
+https://addyosmani.com/resources/essentialjsdesignpatterns/book/#revealingmodulepatternjavascript
+https://christianheilmann.com/2007/08/22/again-with-the-module-pattern-reveal-something-to-the-world/
 
