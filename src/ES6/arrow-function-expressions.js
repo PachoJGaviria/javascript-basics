@@ -41,13 +41,13 @@ olga.greetWorld();
 
 console.log('------------------')
 let count = 0;
-setTimeout(()=>{
+setTimeout(() => {
     count++;
     console.log(`The count is ${count}`);
 }, 500);
 console.log('------------------')
-const vowels = 'aieou'.split('');
-const bigVowels = vowels.map((vowel)=>vowel.toUpperCase());
+const vowels = 'a i e o u'.split(' ');
+const bigVowels = vowels.map((vowel) => vowel.toUpperCase());
 console.log(vowels, bigVowels);
 console.log('------------------')
 
@@ -62,3 +62,22 @@ console.log(colors, crazyColors)
  * - arrow functions are only expressions
  *      - there's no such thing as an arrow function declaration
  */
+/**
+ * the value of **this** inside an arrow function is the same as the value of this outside the function.
+ */
+console.log('-------------------------------')
+// constructor
+function IceCream() {
+    this.scoops = 0;
+}
+
+// adds scoop to ice cream
+IceCream.prototype.addScoop = function () {
+    setTimeout(() => { // an arrow function is passed to setTimeout
+        this.scoops++;
+        console.log('scoop added!');
+    }, 0.5);
+};
+
+const dessert = new IceCream();
+dessert.addScoop();
