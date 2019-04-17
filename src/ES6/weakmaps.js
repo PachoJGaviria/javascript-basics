@@ -22,5 +22,4 @@ console.log(library.has(book3));
 book1 = null;
 console.log(library.has(book1));
 console.log(library.has(book2));
-console.log(library.has({}));
 console.log(library.has(book3));
