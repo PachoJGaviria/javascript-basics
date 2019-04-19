@@ -9,8 +9,18 @@ Francisco J. Gaviria
 - https://github.com/PachoJGaviria
 - https://twitter.com/PachoJGaviria
 
-# References
+# Order
+- src/data-type/data-types-operators.js
+- src/data-type/implicit-type-coercion.js
+- src/data-type/null-undefined.js
+- src/data-type/special-operators.js
+- src/statements/statements.js
+- src/statements/truthy-falsy.js
+- src/statements/loops/loops.js
+- src/data-type/arrays/arrays.js
+- src/data-type/arrays/forech.js
 
+# References
 - https://www.udacity.com/course/intro-to-javascript--ud803
 - https://www.udacity.com/course/object-oriented-javascript--ud711
 - https://www.udacity.com/course/es6-javascript-improved--ud356
