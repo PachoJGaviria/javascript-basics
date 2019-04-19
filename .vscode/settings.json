@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "javascript.validate.enable": false,
+  "standard.enable": true,
+  "standard.run": "onType",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/coverge": true
+  },
+  "cSpell.words": [
+    "mochi",
+    "pacho",
+    "truthy",
+    "udacity"
+  ]
+}

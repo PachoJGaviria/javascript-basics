@@ -1,0 +1,11 @@
+# Important Concepts
+- **Nodejs**: As an asynchronous event driven, open-source, cross-platform JavaScript runtime, Node is designed to build scalable network applications. Node.js executes JavaScript code outside of a browser.
+- **npm**: Node.js package manager. It is a package manager for the JavaScript programming language.
+- **package.json**: Specifics of npm's package.json handling. It must be actual JSON, not just a JavaScript object literal.
+- **Git**: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+- **.editorconfig**: This file is for unifying the coding style for different editors and IDEs
+- **.vscode folder**: configurations for VS Code IDE
+  - **extensions.json**: Recommend plugins
+  - **launch.json**: Run and Debug configurations
+  - **settings.json**: Project configurations
+- **jsconfig.json**: Configuration file for javascript for VS Code IDE
