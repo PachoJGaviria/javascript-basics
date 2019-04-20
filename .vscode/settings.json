@@ -1,0 +1,24 @@
+{
+  "editor.tabSize": 2,
+  "editor.formatOnSave": false,
+  "javascript.validate.enable": false,
+  "standard.enable": true,
+  "standard.run": "onType",
+  "standard.autoFixOnSave": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/coverge": true
+  },
+  "cSpell.words": [
+    "Martín",
+    "Pausable",
+    "destructure",
+    "mochi",
+    "pacho",
+    "polyfill",
+    "truthy",
+    "udacity"
+  ]
+}
