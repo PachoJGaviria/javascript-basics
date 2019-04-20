@@ -18,7 +18,13 @@ Francisco J. Gaviria
 - src/statements/truthy-falsy.js
 - src/statements/loops/loops.js
 - src/data-type/arrays/arrays.js
-- src/data-type/arrays/forech.js
+- src/function/function.js
+- src/object/*
+- src/ES6/*
+- src/browser-compatibility/*
+- src/algorithm/*
+- src/files/*
+- src/node-example/*
 
 # Code style
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)

@@ -24,4 +24,4 @@ function reverseString2 (reverseMe) {
 }
 
 console.log(reverseString('Francisco') + ' ama a ' + reverseString('Olga y Martín'))
-console.log(reverseString2('Olga y Martín') + ' aman a ' + reverseString2('Francisco'))
+console.log(reverseString2('Olga y Martín') + ' ama a ' + reverseString2('Francisco'))

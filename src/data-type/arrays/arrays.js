@@ -24,14 +24,40 @@ console.log(donuts)
 
 donuts = ['glazed', 'chocolate frosted', 'Boston creme', 'glazed cruller']
 console.log(donuts)
-console.log(donuts.splice(1, 2, 'chocolate cruller', 'creme de leche')) // removes "chocolate frosted" at index 1 and adds "chocolate cruller" and "creme de leche" starting at index 1
+console.log(donuts.splice(1, 2, 'chocolate cruller', 'creme de milk')) // removes "chocolate frosted" at index 1 and adds "chocolate cruller" and "creme de milk" starting at index 1
 console.log(donuts)
 
-donuts = ['cookies', 'cinnamon sugar', 'creme de leche']
+donuts = ['cookies', 'cinnamon sugar', 'creme de milk']
 donuts.splice(-2, 0, 'chocolate frosted', 'glazed') // it will count backward at the end of an array.
 console.log(donuts)
 donuts.reverse()
 console.log(donuts)
-donuts.sort(donuts)
+donuts.sort()
 console.log(donuts)
 console.log(donuts.join('; '))
+
+/**
+ * ForEach
+ */
+donuts = ['glazed', 'chocolate frosted', 'Boston creme', 'glazed cruller']
+donuts.forEach((element, index, array) => {
+  console.log(`Element => ${element}`)
+  console.log(`Index   => ${index}`)
+  console.log(`array:  => ${array}`)
+})
+console.log(donuts)
+
+/**
+ * Map
+ */
+const order = donuts.map(donut => {
+  if (Math.random() * 10 > 5) {
+    return `2 of ${donut}`
+  }
+  return `1 of ${donut}`
+})
+/**
+ * join
+ */
+console.log(`My order is:
+${order.join('\n')}`)

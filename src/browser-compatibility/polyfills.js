@@ -1,5 +1,5 @@
 /**
- * A **polyfill**, or polyfiller, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively.
+ * A **polyfill**, is a piece of code (or plugin) that provides the technology that you, the developer, expect the browser to provide natively.
  * There are polyfills for all sorts of browser features:
  * SVG
  * Canvas

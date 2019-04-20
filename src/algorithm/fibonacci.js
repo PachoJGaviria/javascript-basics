@@ -17,12 +17,12 @@ function fibonacci (position) {
     return term
   } else {
     var currentFibonacci = 1
-    var previosFibonacci = 0
+    var previousFibonacci = 0
     var temp = 0
     for (var index = 2; index <= position; index++) {
       temp = currentFibonacci
-      currentFibonacci = currentFibonacci + previosFibonacci
-      previosFibonacci = temp
+      currentFibonacci = currentFibonacci + previousFibonacci
+      previousFibonacci = temp
     }
     return currentFibonacci
   }
