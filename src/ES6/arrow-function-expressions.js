@@ -4,7 +4,7 @@ console.log(names, upperNames)
 
 const countries = ['Afghanistan', 'Aruba', 'Bahamas', 'Chile', 'Fiji', 'Gabon', 'Luxembourg', 'Nepal', 'Singapore', 'Uganda', 'Zimbabwe']
 console.log(countries)
-const longCountriesNames = countries.filter(country => country.length > 6);
+const longCountriesNames = countries.filter(country => country.length > 6)
 console.log(longCountriesNames)
 
 /**
@@ -12,43 +12,43 @@ console.log(longCountriesNames)
  * Stored in a variable
  * Passed as an argument to a function
  * Stored in an object's property.
- * 
+ *
  * **Concise body syntax**
  * Has no curly braces surrounding the function body
  * Automatically returns the expression.
- * 
+ *
  * **Block body syntax**
  * It uses curly braces to wrap the function body
  * A return statement needs to be used to actually return something from the function.
  */
 const greet = name => `Hello ${name}!`
-console.log(greet('Pacho'));
+console.log(greet('Pacho'))
 
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-    this.greetWorld = () => console.log(`Hello world. I am ${this.name} and my I am ${this.age} years old.`);
+function Person (name, age) {
+  this.name = name
+  this.age = age
+  this.greetWorld = () => console.log(`Hello world. I am ${this.name} and my I am ${this.age} years old.`)
 }
-const pacho = new Person('Pacho', 30);
-pacho.greetWorld();
+const pacho = new Person('Pacho', 30)
+pacho.greetWorld()
 
 const olga = {
-    name: 'Olga',
-    age: 28,
-    greetWorld: () => console.log(`Hello world. I am ${olga.name} and my I am ${olga.age} years old.`)
-};
-olga.greetWorld();
+  name: 'Olga',
+  age: 28,
+  greetWorld: () => console.log(`Hello world. I am ${olga.name} and my I am ${olga.age} years old.`)
+}
+olga.greetWorld()
 
 console.log('------------------')
-let count = 0;
+let count = 0
 setTimeout(() => {
-    count++;
-    console.log(`The count is ${count}`);
-}, 500);
+  count++
+  console.log(`The count is ${count}`)
+}, 500)
 console.log('------------------')
-const vowels = 'a i e o u'.split(' ');
-const bigVowels = vowels.map((vowel) => vowel.toUpperCase());
-console.log(vowels, bigVowels);
+const vowels = 'a i e o u'.split(' ')
+const bigVowels = vowels.map((vowel) => vowel.toUpperCase())
+console.log(vowels, bigVowels)
 console.log('------------------')
 
 const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'black']
@@ -67,17 +67,17 @@ console.log(colors, crazyColors)
  */
 console.log('-------------------------------')
 // constructor
-function IceCream() {
-    this.scoops = 0;
+function IceCream () {
+  this.scoops = 0
 }
 
 // adds scoop to ice cream
 IceCream.prototype.addScoop = function () {
-    setTimeout(() => { // an arrow function is passed to setTimeout
-        this.scoops++;
-        console.log('scoop added!');
-    }, 0.5);
-};
+  setTimeout(() => { // an arrow function is passed to setTimeout
+    this.scoops++
+    console.log('scoop added!')
+  }, 0.5)
+}
 
-const dessert = new IceCream();
-dessert.addScoop();
+const dessert = new IceCream()
+dessert.addScoop()

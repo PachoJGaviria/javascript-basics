@@ -19,47 +19,47 @@
  * The entire object is wrapped inside curly braces { }.
  */
 var sister = {
-  name: "Sarah",
+  name: 'Sarah',
   age: 23,
-  parents: ["alice", "andy"],
-  siblings: ["julia"],
-  favoriteColor: "purple",
+  parents: ['alice', 'andy'],
+  siblings: ['julia'],
+  favoriteColor: 'purple',
   pets: true,
   paintPicture: () => {
-    return "Sarah paints!";
+    return 'Sarah paints!'
   }
-};
-console.log(sister);
+}
+console.log(sister)
 // two equivalent ways to use the key to return its value
-console.log(sister["parents"]); // returns [ "alice", "andy" ]
-console.log(sister.parents); // also returns ["alice", "andy"]
-console.log(sister.paintPicture);
-console.log(sister.paintPicture());
+console.log(sister['parents']) // returns [ "alice", "andy" ]
+console.log(sister.parents) // also returns ["alice", "andy"]
+console.log(sister.paintPicture)
+console.log(sister.paintPicture())
 
 /**
  * bad practices
  */
 var personWithBadNamesPractices = {
-  name: "Piedad", // DON`T USE QUOTES IN THE OBJECT PROPERTY NAMES
+  name: 'Piedad', // DON`T USE QUOTES IN THE OBJECT PROPERTY NAMES
   age: 57,
-  "1stChild": "Francisco", //BAD. DON`T USE A NUMBER HOW THE FIRST CHAR OF A PROPERTY
-  "2stChild": "Sara", //BAD. THE DOT NOTATION DON`T WORK WITH THOSE PROPERTIES
-  "favorite color": "red", //BAD. DON`T USE SPACES IN THE OBJECT PROPERTY NAMES
-  "favorite-country": "colombia" //BAD. DON`T USE HYPHENS
-};
-console.log("\n");
-console.log(personWithBadNamesPractices);
+  '1stChild': 'Francisco', // BAD. DON`T USE A NUMBER HOW THE FIRST CHAR OF A PROPERTY
+  '2stChild': 'Sara', // BAD. THE DOT NOTATION DON`T WORK WITH THOSE PROPERTIES
+  'favorite color': 'red', // BAD. DON`T USE SPACES IN THE OBJECT PROPERTY NAMES
+  'favorite-country': 'colombia' // BAD. DON`T USE HYPHENS
+}
+console.log('\n')
+console.log(personWithBadNamesPractices)
 var mom = {
-  name: "Piedad",
+  name: 'Piedad',
   age: 57,
-  childrenNames: ["Francisco", "Sara"],
-  favoriteColor: "red",
-  favoriteCountry: "Colombia"
-};
-console.log("\n");
-console.log(mom);
-console.log(mom["name"]);
-console.log(mom.name);
+  childrenNames: ['Francisco', 'Sara'],
+  favoriteColor: 'red',
+  favoriteCountry: 'Colombia'
+}
+console.log('\n')
+console.log(mom)
+console.log(mom['name'])
+console.log(mom.name)
 
 /**
  * In JavaScript, a primitive (e.g., a string, number, boolean, etc.) is immutable. In other words, any changes made to an argument inside a function effectively creates a copy local to that function, and does not affect the primitive outside of that function.
@@ -90,7 +90,7 @@ console.log(mom.name);
  * **Do not use globals variables or methods**
  * - Tight Coupling -> pieces of code are joined together in a way where changing one unintentionally alters the functioning of some other code
  * - Name Collisions -> A name collision occurs when two (or more) functions depend on a variable with the same name
- * - 
+ * -
  *
  * **Object function**
  * - Object.keys() returns an array of a given object's own keys (property names).
@@ -101,40 +101,39 @@ console.log(mom.name);
  * - Be stored in variables
  * - Be returned from a function. -> **Higher-order function = A function that returns another function or take it as argument**
  * - Be passed as arguments into another function. -> **callback function**
- * 
+ *
  *
  *
  */
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 const numbersNames = [
-  "zero",
-  "one",
-  "two",
-  "three",
-  "four",
-  "five",
-  "six",
-  "seven",
-  "eight",
-  "nine"
-];
+  'zero',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine'
+]
 // callback samples
-numbers.forEach(function callbackIsOddNumber(num) {
+numbers.forEach(function callbackIsOddNumber (num) {
   if (num % 2 !== 0) {
-    console.log(`The number ${num} is a odd number!`);
+    console.log(`The number ${num} is a odd number!`)
   }
-});
+})
 
-const numbersNamesLength = numbersNames.map(function callbackGetLength(word) {
-  return word.length;
-});
-console.log(`The names\`s length of the numbers between 0 and 9 are: ${numbersNamesLength}`);
+const numbersNamesLength = numbersNames.map(function callbackGetLength (word) {
+  return word.length
+})
+console.log(`The names\`s length of the numbers between 0 and 9 are: ${numbersNamesLength}`)
 
-const evenNumbers = numbers.filter(function isEven(num) {
-  return num !== 0 && num % 2 === 0;
-});
-console.log(`The first even numbers are ${evenNumbers}`);
-
+const evenNumbers = numbers.filter(function isEven (num) {
+  return num !== 0 && num % 2 === 0
+})
+console.log(`The first even numbers are ${evenNumbers}`)
 
 /**
  * objects in JavaScript can represent real-life things. That is, objects can have properties to represent attributes or characteristics, as well as methods to represent actions that can be performed. Using the analogy of spoken language, you can think of objects as nouns, such as a "dog" or a "car." Values of properties are adjectives, such as "blue." Methods, then, are the verbs, such as "bark" or "drive."

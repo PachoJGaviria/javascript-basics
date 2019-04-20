@@ -10,30 +10,30 @@
  * An immediately-invoked function expression, or IIFE (pronounced iffy),
  * is a function that is called immediately after it is defined.
  */
-(function sayHi() {
-  console.log("Hi there!");
+(function sayHi () {
+  console.log('Hi there!')
 })();
 
-(function sayHi(name) {
-  console.log(`Hi there ${name}!`);
-})("Francisco");
+(function sayHi (name) {
+  console.log(`Hi there ${name}!`)
+})('Francisco')
 
 /**
  * **private scope**
  * myFunction refers to an IIFE with a locally-defined variable, hi,
  * and a returned function that closes over hi and prints its value to the console.
  */
-const myFunction = (function() {
-  const hi = "Hi";
-  return function() {
-    console.log(hi);
-  };
-})();
+const myFunction = (function () {
+  const hi = 'Hi'
+  return function () {
+    console.log(hi)
+  }
+})()
 myFunction();
 /**
  * **Alternative Syntax for IIFE's**
  * This is better for a reader
  */
-(function sayHi() {
-  console.log("Hi there again!");
-})();
+(function sayHi () {
+  console.log('Hi there again!')
+})()

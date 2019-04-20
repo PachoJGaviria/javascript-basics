@@ -1,15 +1,15 @@
 /**
  * **closure** -> The process of a function retaining access to its scope
  */
-function remember(number) {
-  return function() {
-    return number;
-  };
+function remember (number) {
+  return function () {
+    return number
+  }
 }
 
-const returnedFunction = remember(5);
+const returnedFunction = remember(5)
 
-console.log(returnedFunction());
+console.log(returnedFunction())
 
 /**
  * **lexical environment** The association of Identifiers to specific variables and functions based upon the lexical nesting structure of ECMAScript code.

@@ -7,7 +7,7 @@
  * **A common misconception is that "this" refers to the object where it is defined. This is not the case!**
  */
 
- /**
+/**
   * There are four ways to call functions, and each way sets this differently.
   * - Calling a constructor function with the new keyword sets this to a newly-created object.
   * - Calling a function that belongs to an object (i.e., a method) sets this to the object itself.
@@ -15,11 +15,11 @@
   * - Call functions allows us to set "this" ourselves! -> with apply(), call() and bind(). Those methods share quite a few similarities, and they each allow us to specify how we want to set this
   */
 
-  /**
+/**
    * 1. A new object
 If the function is called with new:
 
-const mySundae = new Sundae('Chocolate', ['Sprinkles', 'Hot Fudge']); 
+const mySundae = new Sundae('Chocolate', ['Sprinkles', 'Hot Fudge']);
 In the code above, the value of this inside the Sundae constructor function is a new object because it was called with new.
 
 2. A specified object

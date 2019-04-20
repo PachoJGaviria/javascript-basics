@@ -23,21 +23,21 @@ the isExtensible trap - lets the proxy handle calls to Object.isExtensible on th
 the getPrototypeOf trap - lets the proxy handle calls to Object.getPrototypeOf on the proxy object
 the setPrototypeOf trap - lets the proxy handle calls to Object.setPrototypeOf on the proxy object
  */
-const richard = {status: 'looking for work'};
+const richard = { status: 'looking for work' }
 const handler = {
-    get(target, propName) {
-        console.log(target); // the `richard` object, not `handler` and not `agent`
-        console.log(propName); // the name of the property the proxy (`agent` in this case) is checking
-        return target[propName];
-    },
-    set(target, propName, value) {
-        if (propName === 'payRate') { // if the pay is being set, take 15% as commission
-            value = value * 0.85;
-        }
-        target[propName] = value;
+  get (target, propName) {
+    console.log(target) // the `richard` object, not `handler` and not `agent`
+    console.log(propName) // the name of the property the proxy (`agent` in this case) is checking
+    return target[propName]
+  },
+  set (target, propName, value) {
+    if (propName === 'payRate') { // if the pay is being set, take 15% as commission
+      value = value * 0.85
     }
-};
-const agent = new Proxy(richard, handler);
-console.log(agent.status); // logs out the richard object (not the agent object!) and the name of the property being accessed (`status`)
-agent.payRate = 1000; // set the actor's pay to $1,000
-console.log(agent.payRate); // $850 the actor's actual pay
+    target[propName] = value
+  }
+}
+const agent = new Proxy(richard, handler)
+console.log(agent.status) // logs out the richard object (not the agent object!) and the name of the property being accessed (`status`)
+agent.payRate = 1000 // set the actor's pay to $1,000
+console.log(agent.payRate) // $850 the actor's actual pay

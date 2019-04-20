@@ -5,65 +5,62 @@ If it doesn't find the property in question, it will then search the object's co
 If the property doesn't exist in the prototype, the JavaScript engine will continue looking up the chain.
 At the very end of the chain is the Object() object, or the top-level parent. If the property still cannot be found, the property is undefined.
  */
-
-const myArray = [1, 2, 3, 4];
-console.dir(myArray);
-console.dir(Object.getPrototypeOf(myArray));
-console.dir(Array.prototype);
-console.log(myArray.__proto__);
-
+const myArray = [1, 2, 3, 4]
+console.dir(myArray)
+console.dir(Object.getPrototypeOf(myArray))
+console.dir(Array.prototype)
+console.log(myArray.__proto__) // eslint-disable-line no-proto
 /**
- * 
+ *
  */
-function Phone() {
-    this.operatingSystem = 'Android';
+function Phone () {
+  this.operatingSystem = 'Android'
 }
-Phone.prototype.screenSize = 6;
-const myPhone = new Phone();
-const own = myPhone.hasOwnProperty('operatingSystem');
-console.log(own);
-const inherited = myPhone.hasOwnProperty('screenSize');
-console.log(inherited);
-
+Phone.prototype.screenSize = 6
+const myPhone = new Phone()
+const own = myPhone.hasOwnProperty('operatingSystem')
+console.log(own)
+const inherited = myPhone.hasOwnProperty('screenSize')
+console.log(inherited)
 
 /**
- * 
+ *
  */
 const rodent = {
-    favoriteFood: 'cheese',
-    hasTail: true
-};
-function Mouse(name) {
-    this.color = 'black';
-    this.name = name
+  favoriteFood: 'cheese',
+  hasTail: true
 }
-Mouse.prototype = rodent;
-const ralph = new Mouse('ralph');
-console.log(ralph.color);
-console.log(ralph.name);
-console.log(ralph.hasTail);
-console.log(ralph.favoriteFood);
-const result = rodent.isPrototypeOf(ralph);
-console.log(result);
-const myPrototype = Object.getPrototypeOf(ralph);
-console.log(myPrototype);
-console.log(Object.getOwnPropertyDescriptors(ralph));
-console.log(ralph.constructor);
-console.log(rodent.constructor);// function Object() { [native code] }
+function Mouse (name) {
+  this.color = 'black'
+  this.name = name
+}
+Mouse.prototype = rodent
+const ralph = new Mouse('ralph')
+console.log(ralph.color)
+console.log(ralph.name)
+console.log(ralph.hasTail)
+console.log(ralph.favoriteFood)
+const result = rodent.isPrototypeOf(ralph)
+console.log(result)
+const myPrototype = Object.getPrototypeOf(ralph)
+console.log(myPrototype)
+console.log(Object.getOwnPropertyDescriptors(ralph))
+console.log(ralph.constructor)
+console.log(rodent.constructor)// function Object() { [native code] }
 console.log('----')
-console.log(ralph.__proto__);
+console.log(ralph.__proto__) // eslint-disable-line no-proto
 
 /**
- * 
+ *
  */
 const capitals = {
-    California: 'Sacramento',
-    Washington: 'Olympia',
-    Oregon: 'Salem',
-    Texas: 'Austin'
-};
-console.log(Object.getPrototypeOf(capitals));
-console.log(Object.getPrototypeOf(capitals) === Object.prototype);
+  California: 'Sacramento',
+  Washington: 'Olympia',
+  Oregon: 'Salem',
+  Texas: 'Austin'
+}
+console.log(Object.getPrototypeOf(capitals))
+console.log(Object.getPrototypeOf(capitals) === Object.prototype)
 console.log(Object.prototype)
 
 /**
@@ -82,24 +79,23 @@ Object.getPrototypeOf()
 /**
  * When the new instance of Mouse is created, the special property ralph.__proto__ is set to Mouse.prototype. This secret link allows instances of the Mouse constructor to access properties of Mouse.prototype. Keep in mind that you should never use the __proto__ in any code you write.
  */
-console.log(Object.getPrototypeOf(ralph));
-console.log(ralph.__proto__);
-console.log(ralph.__proto__ == Mouse.prototype);
-
+console.log(Object.getPrototypeOf(ralph))
+console.log(ralph.__proto__) // eslint-disable-line no-proto
+console.log(ralph.__proto__ === Mouse.prototype) // eslint-disable-line no-proto
 
 /**
- * 
+ *
  */
 console.log('_________________________________')
 const mammal = {
-    vertebrate: true,
-    earBones: 3
-};
-const rabbit = Object.create(mammal);
-console.log(rabbit);
-console.log(rabbit.__proto__ === mammal);
+  vertebrate: true,
+  earBones: 3
+}
+const rabbit = Object.create(mammal)
+console.log(rabbit)
+console.log(rabbit.__proto__ === mammal) // eslint-disable-line no-proto
 console.log('Properties: ')
-console.log(rabbit.vertebrate);
-console.log(rabbit.earBones);
+console.log(rabbit.vertebrate)
+console.log(rabbit.earBones)
 
 // {}

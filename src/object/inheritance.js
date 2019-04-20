@@ -7,28 +7,27 @@ To efficiently manage inheritance in JavaScript, an effective approach is to avo
 
  */
 
-function Animal(name) {
-    this.name = name;
+function Animal (name) {
+  this.name = name
 }
 Animal.prototype.walk = function () {
-    console.log(`${this.name} walks!`);
-};
-
-function Cat(name) {
-    Animal.call(this, name);
-    this.lives = 9;
+  console.log(`${this.name} walks!`)
 }
 
-Cat.prototype = Object.create(Animal.prototype);
-Cat.prototype.constructor = Cat;
+function Cat (name) {
+  Animal.call(this, name)
+  this.lives = 9
+}
+
+Cat.prototype = Object.create(Animal.prototype)
+Cat.prototype.constructor = Cat
 Cat.prototype.meow = function () {
-    console.log('Meow!');
-};
+  console.log('Meow!')
+}
 
-const bambi = new Cat('Bambi');
+const bambi = new Cat('Bambi')
 
-bambi.meow();
-bambi.walk();
-console.log(bambi.name);
+bambi.meow()
+bambi.walk()
+console.log(bambi.name)
 console.log(bambi instanceof Animal)
-

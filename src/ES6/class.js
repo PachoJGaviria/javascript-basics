@@ -1,20 +1,20 @@
-//old ways
-function PlaneOldWay(numEngines) {
-    this.numEngines = numEngines;
-    this.enginesActive = false;
+// old ways
+function PlaneOldWay (numEngines) {
+  this.numEngines = numEngines
+  this.enginesActive = false
 }
 
 // methods "inherited" by all instances
 PlaneOldWay.prototype.startEngines = function () {
-    console.log('starting engines...');
-    this.enginesActive = true;
-};
+  console.log('starting engines...')
+  this.enginesActive = true
+}
 
-var richardsPlane = new PlaneOldWay(1);
-richardsPlane.startEngines();
+let richardsPlane = new PlaneOldWay(1)
+richardsPlane.startEngines()
 
-var jamesPlane = new PlaneOldWay(4);
-jamesPlane.startEngines();
+let jamesPlane = new PlaneOldWay(4)
+jamesPlane.startEngines()
 
 /**
  * the constructor function is called with the new keyword
@@ -23,7 +23,6 @@ jamesPlane.startEngines();
  * "inherited" methods are placed on the constructor function's prototype object
  */
 //
-
 
 /**
  * **Benefits of classes**
@@ -42,33 +41,34 @@ Using classes requires the use of new
 When creating a new instance of a JavaScript class, the new keyword must be used
  */
 class PlaneNewWay {
-    constructor(numEngines) {
-        this.numEngines = numEngines;
-        this.enginesActive = false;
-    }
+  constructor (numEngines) {
+    this.numEngines = numEngines
+    this.enginesActive = false
+  }
 
-    startEngines() {
-        console.log('starting engines…');
-        this.enginesActive = true;
-    }
+  startEngines () {
+    console.log('starting engines…')
+    this.enginesActive = true
+  }
 }
-
+const myNewPlane = new PlaneNewWay(2)
+console.log(myNewPlane)
 
 class Dessert {
-    constructor(calories = 250) {
-        this.calories = calories;
-    }
+  constructor (calories = 250) {
+    this.calories = calories
+  }
 }
 
 class IceCream extends Dessert {
-    constructor(flavor, calories, toppings = []) {
-        super(calories);
-        this.flavor = flavor;
-        this.toppings = toppings;
-    }
-    addTopping(topping) {
-        this.toppings.push(topping);
-    }
+  constructor (flavor, calories, toppings = []) {
+    super(calories)
+    this.flavor = flavor
+    this.toppings = toppings
+  }
+  addTopping (topping) {
+    this.toppings.push(topping)
+  }
 }
 
 const dessert = new Dessert(100)

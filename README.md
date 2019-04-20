@@ -20,6 +20,10 @@ Francisco J. Gaviria
 - src/data-type/arrays/arrays.js
 - src/data-type/arrays/forech.js
 
+# Code style
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
+
+
 # References
 - https://www.udacity.com/course/intro-to-javascript--ud803
 - https://www.udacity.com/course/object-oriented-javascript--ud711
